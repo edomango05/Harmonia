@@ -39,7 +39,7 @@ cmake ..
 cmake --build .
 
 # 3. Run the executable
-./BeamSolver2D
+./Harmonia
 ```
 
 ## Controls and Usage
