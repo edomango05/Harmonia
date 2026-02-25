@@ -2,6 +2,8 @@
 
 A powerful, interactive 2D structural frame analyzer based on the Finite Element Method (FEM). Developed in C using the Raylib graphics library, it allows you to draw structures, apply constraints and loads, and calculate reaction forces and internal stress diagrams in real-time.
 
+![sample.gif](sample.gif)
+
 ## Key Features
 
 * Interactive Modeling: Draw nodes and beams on a magnetic grid using a fluid interface.
