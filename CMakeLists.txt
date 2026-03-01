@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.14)
 project(Harmonia C)
 
 set(CMAKE_C_STANDARD 11)
+# Magia
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Include FetchContent to download raylib automatically
 include(FetchContent)
