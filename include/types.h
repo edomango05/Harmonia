@@ -56,3 +56,29 @@ typedef struct {
     bool release_start;
     bool release_end;
 } Beam;
+
+
+typedef struct {
+    Node *nodes;
+    int nodeCount;
+    int nodeCapacity;
+    Beam *beams;
+    int beamCount;
+    int beamCapacity;
+    AppMode currentMode;
+    float diagramScale;
+} AppScene;
+
+typedef struct {
+    bool isDraggingBeam;
+    int dragStartNodeIdx;
+    bool isDraggingForce;
+    int forceNodeIdx;
+    Vector2 mouseWorldPos;
+    Vector2 snappedPos;
+    int hoveredNodeIdx;
+    int hoveredBeam;
+    float wheel;
+    bool shiftPressed;
+    bool fPressed;
+} InputState;
