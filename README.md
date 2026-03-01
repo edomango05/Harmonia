@@ -45,15 +45,16 @@ cmake --build .
 ## Controls and Usage
 
 ### EDIT Mode (Construction)
-* Right Click: 
+* `Right Click`: 
     * Click on empty space: Create a Node.
     * Drag between nodes: Create a Beam.
-* Left Click (on Node): Cycle through external constraints.
-* Shift + Left Click (on Node): Cycle through internal releases.
-* Mouse Wheel (on Node): Rotate the constraint.
-* 'F' Key + Drag (on Node): Apply and aim a concentrated force.
-* 'F' Key + Arrow Keys (on Beam): Apply a distributed load.
+* `Left Click` (on Node): Cycle through external constraints.
+* `Shift` + `Left Click` (on Node): Cycle through internal releases.
+* `Mouse Wheel` (on Node): Rotate the constraint.
+* `F` Key + `Drag` (on Node): Apply and aim a concentrated force.
+* `F` Key + `Arrow Keys` (on Beam): Apply a distributed load.
+* `C` Key: Cleans the whole scene.
 
 ### Results Visualization
-* TAB Key: Toggle through visualization modes (EDIT -> REACTIONS -> N -> T -> M).
-* Up/Down Arrows: Visually scale the size of diagrams and reaction arrows.
+* `TAB` Key: Toggle through visualization modes (EDIT -> REACTIONS -> N -> T -> M).
+* `Up/Down Arrows`: Visually scale the size of diagrams and reaction arrows.
