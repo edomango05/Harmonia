@@ -1,9 +1,9 @@
-#include "raylib.h"
 #include <stdbool.h>
 
-#include "types.h"
-#include "scene.h"
 #include "graphics.h"
+#include "raylib.h"
+#include "scene.h"
+#include "types.h"
 
 const Color COLOR_BG = {24, 24, 24, 255};
 const Color COLOR_GRID = {50, 50, 50, 255};
@@ -18,36 +18,36 @@ const Color COLOR_DIAGRAM_T = {50, 200, 255, 255};
 const Color COLOR_DIAGRAM_M = {255, 100, 200, 255};
 
 int main(void) {
-    const int screenWidth = 1280;
-    const int screenHeight = 720;
+	const int screenWidth = 1280;
+	const int screenHeight = 720;
 
-    SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_MSAA_4X_HINT);
-    InitWindow(screenWidth, screenHeight, "Beam Solver 2D - FEM Engine");
-    SetTargetFPS(60);
+	SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_MSAA_4X_HINT);
+	InitWindow(screenWidth, screenHeight, "Beam Solver 2D - FEM Engine");
+	SetTargetFPS(60);
 
-    Camera2D camera = {0};
-    camera.zoom = 1.0f;
-    camera.offset = (Vector2){screenWidth / 2.0f, screenHeight / 2.0f};
+	Camera2D camera = {0};
+	camera.zoom = 1.0f;
+	camera.offset = (Vector2){screenWidth / 2.0f, screenHeight / 2.0f};
 
-    AppScene scene = InitScene();
-    InputState input = {0};
+	AppScene scene = InitScene();
+	InputState input = {0};
 
-    while (!WindowShouldClose()) {
-        UpdateInputState(&input, &scene, camera);
-        ProcessAppInput(&scene, &input, &camera);
+	while (!WindowShouldClose()) {
+		UpdateInputState(&input, &scene, camera);
+		ProcessAppInput(&scene, &input, &camera);
 
-        BeginDrawing();
-        ClearBackground(COLOR_BG);
-        
-        BeginMode2D(camera);
-        RenderScene(&scene, &input);
-        EndMode2D();
-        
-        DrawTopUI(scene.currentMode, scene.diagramScale, GetScreenWidth());
-        EndDrawing();
-    }
+		BeginDrawing();
+		ClearBackground(COLOR_BG);
 
-    FreeScene(&scene);
-    CloseWindow();
-    return 0;
+		BeginMode2D(camera);
+		RenderScene(&scene, &input);
+		EndMode2D();
+
+		DrawTopUI(scene.currentMode, scene.diagramScale, GetScreenWidth());
+		EndDrawing();
+	}
+
+	FreeScene(&scene);
+	CloseWindow();
+	return 0;
 }

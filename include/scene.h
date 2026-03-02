@@ -1,7 +1,7 @@
 #pragma once
 
-#include "types.h"
 #include "raylib.h"
+#include "types.h"
 
 int GetNodeAtGridPosition(Node *nodes, int count, Vector2 pos);
 int GetNodeUnderMouse(Node *nodes, int count, Vector2 mouseWorldPos);

@@ -1,7 +1,8 @@
 #pragma once
 
-#include "raylib.h"
 #include <stdbool.h>
+
+#include "raylib.h"
 
 bool SolveLinearSystem(double *A, double *B, int N);
 double SnapToZero(double value, double tolerance);
