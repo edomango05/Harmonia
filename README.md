@@ -35,7 +35,7 @@ mkdir build
 cd build
 
 # 2. Configure and Compile
-cmake ..
+CMAKE_POLICY_VERSION_MINIMUM=3.5 cmake ..
 cmake --build .
 
 # 3. Run the executable
